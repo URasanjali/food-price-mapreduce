@@ -1,0 +1,110 @@
+=== Step 1: Upload dataset to HDFS ===
+Dataset uploaded.
+=== Step 2: Remove old output (if any) ===
+=== Step 3: Run MapReduce Streaming Job ===
+packageJobJar: [/tmp/hadoop-unjar8114767036005722432/] [] /tmp/streamjob330327424598499978.jar tmpDir=null
+2026-03-14 10:10:26,245 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+2026-03-14 10:10:26,463 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+2026-03-14 10:10:26,907 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/uresha/.staging/job_1773431669341_0002
+2026-03-14 10:10:27,313 INFO mapred.FileInputFormat: Total input files to process : 1
+2026-03-14 10:10:27,401 INFO mapreduce.JobSubmitter: number of splits:2
+2026-03-14 10:10:27,683 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1773431669341_0002
+2026-03-14 10:10:27,683 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2026-03-14 10:10:27,823 INFO conf.Configuration: resource-types.xml not found
+2026-03-14 10:10:27,824 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2026-03-14 10:10:28,327 INFO impl.YarnClientImpl: Submitted application application_1773431669341_0002
+2026-03-14 10:10:28,380 INFO mapreduce.Job: The url to track the job: http://DESKTOP-7LL92BI.:8088/proxy/application_1773431669341_0002/
+2026-03-14 10:10:28,381 INFO mapreduce.Job: Running job: job_1773431669341_0002
+2026-03-14 10:10:38,538 INFO mapreduce.Job: Job job_1773431669341_0002 running in uber mode : false
+2026-03-14 10:10:38,540 INFO mapreduce.Job:  map 0% reduce 0%
+2026-03-14 10:10:51,055 INFO mapreduce.Job:  map 100% reduce 0%
+2026-03-14 10:10:57,102 INFO mapreduce.Job:  map 100% reduce 100%
+2026-03-14 10:10:57,115 INFO mapreduce.Job: Job job_1773431669341_0002 completed successfully
+2026-03-14 10:10:57,250 INFO mapreduce.Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=27049170
+		FILE: Number of bytes written=54938024
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=87268049
+		HDFS: Number of bytes written=366652
+		HDFS: Number of read operations=11
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Launched map tasks=2
+		Launched reduce tasks=1
+		Data-local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=20491
+		Total time spent by all reduces in occupied slots (ms)=2981
+		Total time spent by all map tasks (ms)=20491
+		Total time spent by all reduce tasks (ms)=2981
+		Total vcore-milliseconds taken by all map tasks=20491
+		Total vcore-milliseconds taken by all reduce tasks=2981
+		Total megabyte-milliseconds taken by all map tasks=20982784
+		Total megabyte-milliseconds taken by all reduce tasks=3052544
+	Map-Reduce Framework
+		Map input records=743915
+		Map output records=743913
+		Map output bytes=25561338
+		Map output materialized bytes=27049176
+		Input split bytes=236
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=7066
+		Reduce shuffle bytes=27049176
+		Reduce input records=743913
+		Reduce output records=7066
+		Spilled Records=1487826
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=84
+		CPU time spent (ms)=12350
+		Physical memory (bytes) snapshot=838520832
+		Virtual memory (bytes) snapshot=8233865216
+		Total committed heap usage (bytes)=455081984
+		Peak Map Physical memory (bytes)=309379072
+		Peak Map Virtual memory (bytes)=2747355136
+		Peak Reduce Physical memory (bytes)=233410560
+		Peak Reduce Virtual memory (bytes)=2740113408
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=87267813
+	File Output Format Counters 
+		Bytes Written=366652
+2026-03-14 10:10:57,250 INFO streaming.StreamJob: Output directory: hdfs:///food_prices/output
+=== Step 4: Show output sample ===
+--- First 20 results ---
+Afghanistan	Bread	2014	42.84	29.40	55.60	96
+Afghanistan	Bread	2015	44.99	29.40	65.25	80
+Afghanistan	Bread	2016	44.75	29.40	55.50	96
+Afghanistan	Bread	2017	44.57	29.00	51.72	48
+Afghanistan	Exchange rate	2014	57.40	56.48	58.25	56
+Afghanistan	Exchange rate	2015	61.24	57.12	67.70	96
+Afghanistan	Exchange rate	2016	67.79	65.65	69.17	96
+Afghanistan	Exchange rate	2017	67.51	66.53	68.25	48
+Afghanistan	Fuel (diesel)	2000	28081.55	12075.00	147263.00	59
+Afghanistan	Fuel (diesel)	2001	27044.15	7300.00	97500.00	69
+Afghanistan	Fuel (diesel)	2002	14650.41	3100.00	43333.00	71
+Afghanistan	Fuel (diesel)	2003	14.75	10.00	20.00	72
+Afghanistan	Fuel (diesel)	2004	18.83	12.88	28.00	82
+Afghanistan	Fuel (diesel)	2014	57.69	41.25	70.00	56
+Afghanistan	Fuel (diesel)	2015	43.96	35.50	55.75	96
+Afghanistan	Fuel (diesel)	2016	36.97	30.00	55.50	96
+Afghanistan	Fuel (diesel)	2017	42.31	36.50	52.00	48
+Afghanistan	Livestock (sheep, one-year-old alive female)	2000	1060087.13	482916.50	2137500.00	48
+Afghanistan	Livestock (sheep, one-year-old alive female)	2001	1828247.55	808341.50	3683333.25	68
+Afghanistan	Livestock (sheep, one-year-old alive female)	2002	2238287.46	168889.00	5833333.00	71
+cat: Unable to write to output stream.
+=== Step 5: Download full output ===
+get: `output/results.tsv': File exists
+Results saved to output/results.tsv
