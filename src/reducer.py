@@ -10,11 +10,11 @@ Output: Country | Commodity | Year | AvgPrice | MinPrice | MaxPrice | Count
 import sys
 
 def reducer():
-    current_key  = None
-    total_price  = 0.0
-    min_price    = float('inf')
-    max_price    = float('-inf')
-    count        = 0
+    current_key  = None             # Stores the current key (country|commodity|year)
+    total_price  = 0.0              # Sum of prices for this key
+    min_price    = float('inf')     # Initialize minimum price to positive infinity
+    max_price    = float('-inf')    # Initialize maximum price to negative infinity
+    count        = 0                # Count of records for this key
 
     for line in sys.stdin:
         line = line.strip()
@@ -25,7 +25,7 @@ def reducer():
         if len(parts) != 2:
             continue
 
-        key, value = parts[0], parts[1]
+        key, value = parts[0], parts[1]   # Extract key and value
 
         try:
             price = float(value)
