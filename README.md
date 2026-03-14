@@ -4,9 +4,9 @@
 *Module:* EE7222/EC7204 - Cloud Computing
 *Assignment:* Large-Scale Data Analysis Using MapReduce
 *Team Members:*
-- Member 1: [Name] - [Index Number]
-- Member 2: [Name] - [Index Number]
-- Member 3: [Name] - [Index Number]
+- Member 1: Ranasinghe R.M.W.O - EG/2021/4738
+- Member 2: Ranathunga O.K. - EG/2021/4741
+- Member 3: Rasanjali A.J.U. - EG/2021/4741
 
 ---
 
